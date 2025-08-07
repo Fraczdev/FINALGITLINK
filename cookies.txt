@@ -1,0 +1,8 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+linktr.ee	TRUE	/	FALSE	1999999999	countryCode	IT
+linktr.ee	TRUE	/	FALSE	1999999999	ipOverride	87.19.178.225
+linktr.ee	TRUE	/	FALSE	1999999999	city	rocca san giovanni
+linktr.ee	TRUE	/	FALSE	1999999999	region	CH
+linktr.ee	TRUE	/	FALSE	1999999999	SameSite	Strict
+
