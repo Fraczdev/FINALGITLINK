@@ -316,16 +316,35 @@
     <!-- QR Code -->
     <div class="qr-code">
         <p class="qr-text">View on mobile</p>
-        <div class="qr-image">
-            <!-- QR code would be generated here -->
-            <svg width="100" height="100" viewBox="0 0 1000 1000">
-                <!-- Simplified QR code representation -->
-                <rect width="1000" height="1000" fill="white"/>
-                <rect x="100" y="100" width="800" height="800" fill="black"/>
-                <rect x="150" y="150" width="700" height="700" fill="white"/>
-                <!-- Add more QR code patterns here -->
-            </svg>
+        <div class="qr-image" id="qr-code-container">
+            <!-- QR code will be generated here -->
         </div>
     </div>
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script>
+        // Generate QR code when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const qrContainer = document.getElementById('qr-code-container');
+            const currentUrl = window.location.href;
+            
+            // Generate QR code
+            QRCode.toCanvas(qrContainer, currentUrl, {
+                width: 120,
+                margin: 2,
+                color: {
+                    dark: '#000000',
+                    light: '#FFFFFF'
+                }
+            }, function (error) {
+                if (error) {
+                    console.error('QR Code generation failed:', error);
+                    // Fallback to text if QR generation fails
+                    qrContainer.innerHTML = '<div style="width: 120px; height: 120px; background: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 10px; text-align: center; color: black;">QR Code<br>Failed to<br>Generate</div>';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
