@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zilk | Instagram, TikTok | Linktree</title>
+    <title>zilk | Instagram, TikTok</title>
     <style>
         * {
             margin: 0;
@@ -286,9 +286,13 @@
             const qrContainer = document.getElementById('qr-code-container');
             const currentUrl = window.location.href;
             
-            // Generate QR code
-            QRCode.toCanvas(qrContainer, currentUrl, {
+            // Clear the container first
+            qrContainer.innerHTML = '';
+            
+            // Generate QR code as SVG (more reliable)
+            QRCode.toSVG(qrContainer, currentUrl, {
                 width: 120,
+                height: 120,
                 margin: 2,
                 color: {
                     dark: '#000000',
@@ -297,8 +301,9 @@
             }, function (error) {
                 if (error) {
                     console.error('QR Code generation failed:', error);
-                    // Fallback to text if QR generation fails
-                    qrContainer.innerHTML = '<div style="width: 120px; height: 120px; background: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 10px; text-align: center; color: black;">QR Code<br>Failed to<br>Generate</div>';
+                    // Fallback to a simple QR code using a service
+                    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(currentUrl)}`;
+                    qrContainer.innerHTML = `<img src="${qrUrl}" alt="QR Code" style="width: 120px; height: 120px; border-radius: 8px;">`;
                 }
             });
         });
