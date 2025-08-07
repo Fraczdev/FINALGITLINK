@@ -1,0 +1,6 @@
+name = "linktree-copy"
+main = ".next/server/app/index.js"
+compatibility_date = "2024-02-20"
+
+[site]
+bucket = ".next/static"
