@@ -14,76 +14,11 @@
         
         body {
             font-family: 'Space Mono', monospace;
-            background-color: #ffeee1;
+            min-height: 100vh;
             overflow-x: hidden;
-        }
-        
-        /* Profile container and video styles */
-        .sc-bRKDuR {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        
-        .bHeySE {
-            background-color: #fff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        
-        /* Hero content */
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             color: white;
-            text-align: center;
         }
-        
-        .profile-picture {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-        }
-        
-        .profile-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .profile-description {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-        
-        /* Social icons */
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        
+
         .social-icon {
             width: 32px;
             height: 32px;
@@ -94,47 +29,7 @@
         .social-icon:hover {
             transform: scale(1.075);
         }
-        
-        /* Links container */
-        .links-container {
-            position: relative;
-            z-index: 1;
-            max-width: 580px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        
-        .link-header {
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 700;
-            color: white;
-            margin: 2rem 0 1rem 0;
-        }
-        
-        .link-item {
-            display: block;
-            width: 100%;
-            padding: 1rem 2rem;
-            margin-bottom: 1rem;
-            background: transparent;
-            border: 1px solid #99a18c;
-            border-radius: 32px;
-            color: #fdfffa;
-            text-decoration: none;
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.25s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .link-item:hover {
-            background-color: #99a18c;
-            transform: scale(1.02);
-        }
-        
+
         /* QR Code */
         .qr-code {
             position: fixed;
@@ -169,99 +64,67 @@
             align-items: center;
             justify-content: center;
         }
-        
-        .qr-image svg {
-            width: 100%;
-            height: 100%;
-        }
-        
-        /* Top bar */
-        .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 200;
-            padding: 1rem;
-        }
-        
-        .top-bar-content {
-            max-width: 580px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
     </style>
     
     <!-- CSS files -->
     <link rel="stylesheet" href="../static/css/f14941bedd3564cd.css" crossorigin="anonymous" data-n-g=""/>
     
-    <!-- JavaScript files -->
-    <script>window.__lter=window.__lter||{q:window.__lter && _lter.q||[],trackEvent:function(){__lter.q.push(Array.prototype.slice.call(arguments))}}</script>
-    <script id="__ltcep" data-version="2" data-url="nktr.ee/uLZfGRmpj7il.ssergni//:sptth" src="../static/chunks/cep.min.js"></script>
-    <script class="optanon-category-C0005" type="text/plain">(function (d, s, id) { var js, sjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "../sdk.snapkit.com/js/v1/create.js"; sjs.parentNode.insertBefore(js, sjs); })(document, "script", "snapchat-share-button");</script>
-    <script defer="" crossorigin="anonymous" nomodule="" src="../static/chunks/polyfills-c67a75d1b6f99dc8.js"></script>
+    <!-- Only essential JavaScript -->
     <script src="../static/chunks/webpack-557490d22a2b85bf.js" defer="" crossorigin="anonymous"></script>
     <script src="../static/chunks/framework-ca32d4ec620501e2.js" defer="" crossorigin="anonymous"></script>
     <script src="../static/chunks/main-cea5024b8e5aa889.js" defer="" crossorigin="anonymous"></script>
-    <script src="../static/chunks/_app-d0dda06fec8892e7.js" defer="" crossorigin="anonymous"></script>
-    <script src="../static/chunks/9139-60125e0ad069d3c0.js" defer="" crossorigin="anonymous"></script>
-    <script src="../static/chunks/5083-6c500f88f0043f98.js" defer="" crossorigin="anonymous"></script>
-    <script src="../static/chunks/[profile]-15e0b9280691d9ea.js" defer="" crossorigin="anonymous"></script>
-    <script src="../static/chunks/_buildManifest.js" defer="" crossorigin="anonymous"></script>
-    <script src="../static/chunks/_ssgManifest.js" defer="" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div data-luminance="DARK" id="profile-container-inner" class="flex h-full w-full flex-1 flex-col justify-between sm:rounded-t-lg sm:[clip-path:inset(0px_calc(50vw_-_min(50vw,_290px))_0px_calc(50vw_-_min(50vw,_290px))_round_24px_24px_0_0)]">
-        <div class="relative mx-auto grid w-full max-w-profileContainer grid-rows-[1fr_auto] min-h-[100lvh] sm:min-h-[calc(100lvh-2.5rem)]">
-            <div data-testid="profile-background" class="sc-bRKDuR bHeySE">
-                <div class="flex h-full w-full items-center justify-center">
-                    <video class="mx-auto h-full w-full max-w-profileContainer object-cover sm:max-w-[100vw]" autoplay muted loop playsinline src="../static/videos/river.mov"></video>
-                </div>
-                <div id="profile-tint" class="absolute inset-0" style="background-color:rgba(0,0,0,0.64)"></div>
-            </div>
-        </div>
-            <div class="hero-content">
-                <img class="profile-picture" src="../ugc.production.linktr.ee/2c0d385b-d6fe-4a3e-90a5-06d2d2315290_7273dd07149113e0790c6019ece6ce1a-tplv-tiktokx-cropcenter-720-72042dc.jpg" alt="Profile Picture">
-                <h1 class="profile-title">zilk</h1>
-                <p class="profile-description">dude i just want a burger</p>
-            
-            <div class="social-icons">
-                <a href="https://instagram.com/_fra._.n" target="_blank" rel="noopener noreferrer" class="social-icon">
-                    <object data="../static/icons/instagram.svg" type="image/svg+xml"></object>
-                </a>
-                <a href="https://tiktok.com/@_dont_know_yet" target="_blank" rel="noopener noreferrer" class="social-icon">
-                    <object data="../static/icons/tiktok.svg" type="image/svg+xml"></object>
-                </a>
-                <a href="https://x.com/2_zilk" target="_blank" rel="noopener noreferrer" class="social-icon">
-                    <object data="../static/icons/x.svg" type="image/svg+xml"></object>
-                </a>
-            </div>
+    <div class="fixed inset-0 overflow-hidden">
+        <div class="absolute inset-0">
+            <video class="h-full w-full object-cover" autoplay muted loop playsinline src="../static/videos/river.mov"></video>
+            <div class="absolute inset-0 bg-black/60"></div>
         </div>
     </div>
-    
-    <!-- Links section -->
-    <div class="links-container">
-        <h3 class="link-header">socials</h3>
-        
-        <a href="https://open.spotify.com/user/31idwlgexy5bvaxlhnvqkzuinhfu" target="_blank" rel="noopener" class="link-item">
-            Spotify
-        </a>
-        
-        <a href="https://www.instagram.com/_fra._.n" target="_blank" rel="noopener" class="link-item">
-            Instagram
-        </a>
-        
-        <a href="https://www.tiktok.com/@_dont_know_yet" target="_blank" rel="noopener" class="link-item">
-            TikTok
-        </a>
-        
-        <h3 class="link-header">work!!! haha!!!</h3>
-        
-        <a href="http://fondfracz.is-a.dev/" target="_blank" rel="noopener" class="link-item">
-            (more serious) Portfolio
-        </a>
+
+    <div class="relative z-10 mx-auto max-w-[580px] px-4 py-12 text-white">
+        <!-- Profile Section -->
+        <div class="flex flex-col items-center mb-8">
+            <img class="w-24 h-24 rounded-full mb-4" src="../ugc.production.linktr.ee/2c0d385b-d6fe-4a3e-90a5-06d2d2315290_7273dd07149113e0790c6019ece6ce1a-tplv-tiktokx-cropcenter-720-72042dc.jpg" alt="Profile Picture">
+            <h1 class="text-2xl font-bold mb-2">zilk</h1>
+            <p class="text-lg opacity-90">dude i just want a burger</p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center gap-4 mb-8">
+            <a href="https://instagram.com/_fra._.n" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <object data="../static/icons/instagram.svg" type="image/svg+xml"></object>
+            </a>
+            <a href="https://tiktok.com/@_dont_know_yet" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <object data="../static/icons/tiktok.svg" type="image/svg+xml"></object>
+            </a>
+            <a href="https://x.com/2_zilk" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <object data="../static/icons/x.svg" type="image/svg+xml"></object>
+            </a>
+        </div>
+
+        <!-- Links Section -->
+        <div class="space-y-4">
+            <h3 class="text-center font-bold mb-4">socials</h3>
+            
+            <a href="https://open.spotify.com/user/31idwlgexy5bvaxlhnvqkzuinhfu" target="_blank" rel="noopener" class="block w-full p-4 mb-3 bg-transparent border border-[#99a18c] rounded-[32px] text-center hover:bg-[#99a18c] transition-all">
+                Spotify
+            </a>
+            
+            <a href="https://www.instagram.com/_fra._.n" target="_blank" rel="noopener" class="block w-full p-4 mb-3 bg-transparent border border-[#99a18c] rounded-[32px] text-center hover:bg-[#99a18c] transition-all">
+                Instagram
+            </a>
+            
+            <a href="https://www.tiktok.com/@_dont_know_yet" target="_blank" rel="noopener" class="block w-full p-4 mb-3 bg-transparent border border-[#99a18c] rounded-[32px] text-center hover:bg-[#99a18c] transition-all">
+                TikTok
+            </a>
+            
+            <h3 class="text-center font-bold mt-8 mb-4">work!!! haha!!!</h3>
+            
+            <a href="http://fondfracz.is-a.dev/" target="_blank" rel="noopener" class="block w-full p-4 mb-3 bg-transparent border border-[#99a18c] rounded-[32px] text-center hover:bg-[#99a18c] transition-all">
+                (more serious) Portfolio
+            </a>
+        </div>
     </div>
     
     <!-- QR Code -->
